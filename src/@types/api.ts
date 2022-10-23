@@ -1,10 +1,11 @@
 
+//create interface pokemon data result
 export interface PokemonsResponseResutl  {
     name:string;
     url:string;
 }
 
-
+//this interface to pokemon data result
 export interface PokemonsResponse  {
      data:{
         count:number;
@@ -14,6 +15,16 @@ export interface PokemonsResponse  {
      }
 }
 
+//this Interface to return status descriptions,
+export interface Stat{
+    base_stat:number;
+    stat:{
+        name:string;
+    }
+}
+
+
+//this interface to return image of pokemons
 export interface PokemonResponse  {
     data:{
         name:string;
@@ -21,9 +32,14 @@ export interface PokemonResponse  {
             other:{
                 dream_world:{
                     front_default:string;
+                };
+                'official-artwork':{
+                    front_default:string
                 }
             }
         }
+
+        stats:Stat[]
 
     }
 }

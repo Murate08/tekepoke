@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import Header from "../components/Header/header"
+import PokemonCard from "../components/PokemonSection/PokemonCard"
 import useFindPokemon from "../hooks/findPokemon"
 
 
@@ -28,15 +29,18 @@ const PokemonDetails: React.FC<{}> = () =>{
         
         <>
         <Header/>
-        <div className="flex group  flex-col p-12 justify-center items-center w-full h-[100vh] bg-gray-900">
-            <div className="w-full flex-col group group py-20 m-40 flex justify-center items-center bg-gray-800 rounded-lg">
-                <div >
-                    <img  src={pokemon.data?.data.sprites.other.dream_world.front_default} alt={pokemon.data?.data.name}/>
+        <div>
+        <div className="flex w-full h-[100vh] bg-gray-900">
+            <div className="container  flex  items-center justify-center">
+              {pokemon.data && (
+                <div>
+                    <PokemonCard name={pokemon.data.data.name} showStats/>            
                 </div>
-                <div>{pokemon.data?.data.name}</div>
-                
+              )}
+            
             </div>
             
+        </div>
         </div>
         </>
     )

@@ -1,8 +1,4 @@
-import { useState, useEffect } from 'react'
-import {useQuery} from 'react-query'
 import '../../styles/global.css'
-import Poke from '../../assets/poke.jpg'
-import { pokemonApi } from '../../service'
 import PokemonCard from './PokemonCard'
 import { PokemonsResponseResutl } from '../../@types/api'
 import { useApp } from '../../states/AppState'
@@ -16,13 +12,13 @@ function Pokemons() {
  }
 
   return (
-    <div className="flex items-center justify-center flex-col text-gray-200">
+    <div  className="flex items-center justify-center flex-col text-gray-200">
        
     
        <div className='flex flex-wrap justify-center items-center gap-2 mt-28'>
            
        {
-            pokemons.data?.data.results.slice(0,50).map((pokemon: PokemonsResponseResutl)=>(
+            pokemons.data?.data.results.slice(0,100).map((pokemon: PokemonsResponseResutl)=>(
                 <PokemonCard key={pokemon.name} name={pokemon.name} />
            ))}
 

@@ -8,7 +8,7 @@ function HomeScreen() {
 
   return (
  
-        <div className='w-screen h-full bg-gray-900'>
+        <div className='w-full h-full bg-gray-900'>
            <Header/>
             <Pokemons/>
         </div>
