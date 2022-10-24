@@ -42,7 +42,7 @@ another page containing the details of that Pokémon.
 
 How was the environment configuration for the project:
 ### Steps:
-  1. yarn create vite;
+  1. yarn create vite or npm create vite@latest;
   2. npm install -D tailwindcss;
   3. npx tailwindcss init -p;
   4. npm install -D tailwindcss postcss autoprefixer
