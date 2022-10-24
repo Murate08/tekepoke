@@ -5,6 +5,7 @@ import { AppStateProvider } from './states/AppState'
 import HomeScreen from './Screens/Home'
 import PokemonDetails from './Screens/PokemonsDetails'
 import {FavoriteScreen} from './Screens/FavoritePokemons'
+import { FavoriteProvider } from './states/favorite'
 
 
 
@@ -22,13 +23,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AppStateProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/'  element={<HomeScreen/>} />
-            <Route path='/:pokemon' element={<PokemonDetails/>} />
-            <Route path='/favorites' element={<FavoriteScreen/>} />
-          </Routes>
-        </BrowserRouter>
+        <FavoriteProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/'  element={<HomeScreen/>} />
+              <Route path='/:pokemon' element={<PokemonDetails/>} />
+              <Route path='/favorites' element={<FavoriteScreen/>} />
+            </Routes>
+          </BrowserRouter>
+        </FavoriteProvider>
       </AppStateProvider>
     </QueryClientProvider>
   )

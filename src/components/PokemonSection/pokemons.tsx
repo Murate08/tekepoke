@@ -3,6 +3,8 @@ import PokemonCard from './PokemonCard'
 import { PokemonsResponseResutl } from '../../@types/api'
 import { useApp } from '../../states/AppState'
 
+
+
 function Pokemons() {
 
  const {pokemons} = useApp()

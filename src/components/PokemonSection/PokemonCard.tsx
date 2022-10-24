@@ -2,6 +2,12 @@ import {Link} from 'react-router-dom'
 import useFindPokemon from '../../hooks/findPokemon'
 import {FiHeart} from 'react-icons/fi'
 import '../../styles/global.css'
+import { useContext, useEffect, useState } from 'react';
+import { FavoriteContext } from '../../states/favorite';
+import { PokemonsResponseResutl, PokemonResponse } from '../../@types/api';
+import { useApp } from '../../states/AppState';
+import Pokemons from './pokemons';
+import { pokemonApi } from '../../service';
 
 
 
@@ -17,6 +23,17 @@ interface PokemonCardPorps{
 const PokemonCard: React.FC<PokemonCardPorps>=({name, showStats, favorited})=>{
     const pokemon = useFindPokemon(name)
     const outherSprits = pokemon.data?.data.sprites.other
+    const {pokemons} = useApp()
+    const {setFavorites, favorites} = useContext(FavoriteContext)
+
+
+    //i get some constrain to handle on storage can you help
+    const haldleToFavorite = () =>{
+      localStorage.setItem('favorites',name)
+      return(
+        console.log(name)
+      )   
+    }
 
     return(
         <>
@@ -34,9 +51,9 @@ const PokemonCard: React.FC<PokemonCardPorps>=({name, showStats, favorited})=>{
               {pokemon.data?.data.name}
             </div>
               {showStats && (
-                <div className='t-10'>
+                <div className=''>
                   <div className='w-full mt-2 items-end justify-end flex '>
-                    <button className='bg-gray-900 p-2 rounded-2xl hover:scale-110'>
+                    <button onClick={haldleToFavorite} className='bg-gray-900 p-2 rounded-2xl hover:scale-110'>
                       <FiHeart color='#9d0208'/>
                     </button>
                   </div>

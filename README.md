@@ -13,14 +13,14 @@
 
 1. The main screen contain a list of all Pokémons corresponding name and image.
 
-2. In the main page missing pagination list of Pokémons(to implement).
+2. In the main page  pagination list of Pokémons(to export and reneder).
 
 3. From the main page, user can click a Pokémon, and navigate to
 another page containing the details of that Pokémon.
 
 4. In the Pokémon details page,  user can see at least 6 descriptions, the image and the name of one Pokémon.
 
-5. In the Pokémon detail page, the user can favorite the Pokémon(to implement).
+5. In the Pokémon detail page, the user can favorite the Pokémon(implemented but i get some dificult to handle on favorite page, i can get some help to fixed?).
 
 6. From the main page, user can navigate to another page contain a list of the favorite Pokémons, with corresponding name and image.
 

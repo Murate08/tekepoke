@@ -1,4 +1,5 @@
 import Header from '../components/Header/header'
+import Pagination from '../components/Pagination/Pagination'
 import Pokemons from '../components/PokemonSection/pokemons'
 
 

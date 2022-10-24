@@ -25,9 +25,10 @@ const PokemonDetails: React.FC<{}> = () =>{
         <Header/>
         <div>
           <div className="flex w-full h-[100vh] bg-gray-900">
+       
             <div className="container  flex  items-center justify-center">
               {pokemon.data && (
-                <div>
+                <div className="flex w-[140vh] h-full justify-center items-center">
                   <PokemonCard name={pokemon.data.data.name} showStats/>
                  </div>
                 )}
