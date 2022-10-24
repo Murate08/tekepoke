@@ -9,7 +9,7 @@
 
 
 
-Functionalities Iimplemented:
+### Functionalities Iimplemented:
 
 1. The main screen contain a list of all Pokémons corresponding name and image.
 
@@ -24,7 +24,7 @@ another page containing the details of that Pokémon.
 
 6. From the main page, user can navigate to another page contain a list of the favorite Pokémons, with corresponding name and image.
 
-## Technologies used:
+### Technologies used:
 
 - Typescript;
 - React;
@@ -41,7 +41,7 @@ another page containing the details of that Pokémon.
 
 
 How was the environment configuration for the project:
-## Steps:
+### Steps:
   1. yarn create vite;
   2. npm install -D tailwindcss;
   3. npx tailwindcss init -p;
@@ -52,14 +52,14 @@ How was the environment configuration for the project:
 
 
 
-## To inicialize the app you should install a packege node_modules files whit commands:
+### To inicialize the app you should install a packege node_modules files whit commands:
 
 --yarn or npm install;
 
 
-## To run the app use this commands:
+### To run the app use this commands:
 
 --yarn dev
-# or use
+or use
 --npm run dev
 
