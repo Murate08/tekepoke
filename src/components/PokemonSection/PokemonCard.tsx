@@ -2,12 +2,6 @@ import {Link} from 'react-router-dom'
 import useFindPokemon from '../../hooks/findPokemon'
 import {FiHeart} from 'react-icons/fi'
 import '../../styles/global.css'
-import { useContext, useEffect, useState } from 'react';
-import { FavoriteContext } from '../../states/favorite';
-import { PokemonsResponseResutl, PokemonResponse } from '../../@types/api';
-import { useApp } from '../../states/AppState';
-import Pokemons from './pokemons';
-import { pokemonApi } from '../../service';
 
 
 
@@ -23,8 +17,8 @@ interface PokemonCardPorps{
 const PokemonCard: React.FC<PokemonCardPorps>=({name, showStats, favorited})=>{
     const pokemon = useFindPokemon(name)
     const outherSprits = pokemon.data?.data.sprites.other
-    const {pokemons} = useApp()
-    const {setFavorites, favorites} = useContext(FavoriteContext)
+    
+    
 
 
     //i get some constrain to handle on storage can you help

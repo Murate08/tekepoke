@@ -1,7 +1,5 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import PokemonCard from '../components/PokemonSection/PokemonCard'
-
 import { FavoriteContext } from '../states/favorite'
 
 //Favorite screeen
