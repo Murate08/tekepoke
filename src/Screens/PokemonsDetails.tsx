@@ -10,13 +10,6 @@ const PokemonDetails: React.FC<{}> = () =>{
     const {pokemon: pokemonName} = useParams()
     const pokemon = useFindPokemon(pokemonName)
 
-
-
-
-
-
-    
-
     if(pokemon.isLoading){
       return   (
         <div className="flex justify-center items-center">
