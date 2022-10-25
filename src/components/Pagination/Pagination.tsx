@@ -1,8 +1,8 @@
 //pagination 
 const Pagination = () =>{
     return(
-        <div className="">
-            <nav className="isolate inline-flex sm:w-2 rounded-md shadow-sm" aria-label="Pagination">
+        <div className=" justify-center items-center p-10 flex">
+            <nav className="isolate inline-flex rounded-md shadow-sm" aria-label="Pagination">
                 <a href="#" className="relative inline-flex items-center rounded   bg-gray-800 px-2 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-20">
 
                 <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

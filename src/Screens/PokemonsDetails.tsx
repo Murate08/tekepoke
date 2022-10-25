@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import Header from "../components/Header/header"
-import PokemonCard from "../components/PokemonSection/PokemonCard"
+import PokemonCard from "../components/Pokemon/PokemonCard"
 import useFindPokemon from "../hooks/findPokemon"
 
 
@@ -9,6 +9,13 @@ import useFindPokemon from "../hooks/findPokemon"
 const PokemonDetails: React.FC<{}> = () =>{
     const {pokemon: pokemonName} = useParams()
     const pokemon = useFindPokemon(pokemonName)
+
+
+
+
+
+
+    
 
     if(pokemon.isLoading){
       return   (
